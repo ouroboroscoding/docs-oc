@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 class DocsMenu extends React.Component {
 
@@ -26,7 +25,11 @@ class DocsMenu extends React.Component {
 	}
 
 	itemClicked(ev) {
-
+		this.setState({
+			"selected": ev.currentTarget.dataset.key
+		}, function() {
+			this.props.onChange(this.state.selected);
+		})
 	}
 
 	render() {
@@ -37,12 +40,22 @@ class DocsMenu extends React.Component {
 					<span>{sec.title}</span>
 					<ul>
 						{sec.items.map(function(item, y) {
-							<li dataKey={item.key} onClick={self.itemClicked}>{item.title}</li>
+							<li data-key={item.key} class={self.state.selected == item.key ? 'selected' : ''} onClick={self.itemClicked}>{item.title}</li>
 						})}
 					</ul>
 				</li>
 			})}</ul>
 		);
+	}
+
+	get selected() {
+		return this.state.selected;
+	}
+
+	set selected(v) {
+		this.setState({
+			"selected": v
+		});
 	}
 }
 
@@ -108,6 +121,5 @@ DocsMenu.prototype.validate = function(p) {
 		}
 	}
 }
-
 
 export default DocsMenu;
