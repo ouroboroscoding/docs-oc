@@ -10,25 +10,25 @@ class DocsMenu extends React.Component {
 		// Check the properties (will throw on error)
 		this.validate(props);
 
-		// If there's no change callback
-		if(!props.onChange || typeof props.onChange != 'function') {
-			throw 'DocsMenu requires onChange callback';
+		// If there's no page callback
+		if(!props.onPage || typeof props.onPage != 'function') {
+			throw 'DocsMenu requires onPage callback';
 		}
 
 		// Initialise the state
 		this.state = {
-			"selected": null
+			"page": props.page
 		};
 
 		// Bind methods
-		this.itemClicked = this.itemClicked.bind(this);
+		this.pageClicked = this.pageClicked.bind(this);
 	}
 
-	itemClicked(ev) {
+	pageClicked(ev) {
 		this.setState({
-			"selected": ev.currentTarget.dataset.key
+			"page": ev.currentTarget.dataset.key
 		}, function() {
-			this.props.onChange(this.state.selected);
+			this.props.onPage(this.state.page);
 		})
 	}
 
@@ -39,8 +39,8 @@ class DocsMenu extends React.Component {
 				<li>
 					<span>{sec.title}</span>
 					<ul>
-						{sec.items.map(function(item, y) {
-							<li data-key={item.key} class={self.state.selected == item.key ? 'selected' : ''} onClick={self.itemClicked}>{item.title}</li>
+						{sec.pages.map(function(item, y) {
+							<li data-key={item.key} class={self.state.selected == item.key ? 'selected' : ''} onClick={self.pageClicked}>{item.title}</li>
 						})}
 					</ul>
 				</li>
@@ -48,13 +48,13 @@ class DocsMenu extends React.Component {
 		);
 	}
 
-	get selected() {
-		return this.state.selected;
+	get page() {
+		return this.state.page;
 	}
 
-	set selected(v) {
+	set page(v) {
 		this.setState({
-			"selected": v
+			"page": v
 		});
 	}
 }

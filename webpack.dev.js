@@ -23,5 +23,6 @@ module.exports = {
   output: {
     filename: "[name].dev.js",
     path: path.resolve(__dirname, '.')
-  }
+  },
+  watch: true
 };
