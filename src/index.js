@@ -1,6 +1,20 @@
 // Libraries
-import React from "react";
-import ReactDOM from "react-dom";
+var React = require("react");
+var ReactDOM = require("react-dom");
 
 // Primary component
-import Docs from "./docs.jsx"
+var Docs = require("./docs.jsx")
+
+// Export
+module.exports = {
+	"run": function(id, data, initial) {
+		ReactDOM.render(
+			React.createElement(Docs, {
+				"data": data,
+				"page": initial.page,
+				"platform": initial.platform
+			}),
+			document.getElementById(id)
+		);
+	}
+}

@@ -1,16 +1,25 @@
 {
-  "name": "development",
-  "version": "1.0.0",
+  "name": "docs-oc",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "docs-oc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ouroboroscoding/docs-oc.git"
+  },
+  "keywords": [
+    "documentation",
+    "help"
+  ],
+  "author": "OuroborosCoding <ouroborosocode@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ouroboroscoding/docs-oc/issues"
+  },
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",

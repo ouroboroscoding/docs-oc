@@ -1,5 +1,7 @@
-import React from "react";
+// Import modules
+var React = require("react");
 
+// Create DocsPage class and export it
 class DocsPage extends React.Component {
 
 	constructor(props) {
@@ -52,39 +54,39 @@ class DocsPage extends React.Component {
 		var self = this;
 
 		// Check the page exist
-		if(typeof this.props.pages[this.state.page] != 'undefined') {
+		if(typeof this.props.data[this.state.page] != 'undefined') {
 
 			// Store page details
-			var page = this.props.pages[this.state.page];
+			var page = this.props.data[this.state.page];
 
 			// Render page
 			return (
-				<React.Fragment>
-					<h1>{page.title}</h1>
-					<ul class="platforms">{this.props.platforms.map(function(p, i) {
+				<div className="page">
+					<h1 className="title">{page.title}</h1>
+					<ul className="platforms">{this.props.platforms.map(function(p, i) {
 						return (
-							<li data-key={p.key}>{p.title}</li>
+							<li key={i} data-key={p.key} onClick={self.platformClicked}>{p.title}</li>
 						);
 					})}</ul>
-					<div class="page">
+					<div className="sections">
 						{page.sections.map(function(o, i) {
 							if(o.type == 'code') {
-								return <pre>{o.text[self.state.platform]}</pre>
+								return <pre key={i} className={self.state.platform}>{o.text[self.state.platform]}</pre>
 							} else if(o.type == 'paragraph') {
-								return <p>{o.text}</p>;
+								return <p key={i}>{o.text}</p>;
 							} else if(o.type == 'title') {
-								return <h2>{o.text}</h2>
+								return <h2 key={i}>{o.text}</h2>
 							}
 						})}
 					</div>
-				</React.Fragment>
+				</div>
 			);
 		}
 
 		// Page not found
 		else {
 			return (
-				<div class="missing">Page does not exist</div>
+				<div className="missing">Page does not exist</div>
 			);
 		}
 	}
@@ -136,90 +138,82 @@ DocsPage.prototype.validate = function(p) {
 		}
 	}
 
-	// Check the pages prop is an object
-	if(!p.pages || typeof p.pages != 'object') {
-		throw 'DocsPage.pages must be an object';
+	// Check the data prop is an object
+	if(!p.data || typeof p.data != 'object') {
+		throw 'DocsPage.data must be an object';
 	}
 
 	// Go through each page
-	for(var k in p.pages) {
+	for(var k in p.data) {
 
 		// Check the key is a string
 		if(typeof k != 'string') {
-			throw k + ' of DocsPage.pages must be a string';
+			throw k + ' of DocsPage.data must be a string';
 		}
 
 		// Check the value is an array
-		if(!p.pages[k] || !Array.isArray(p.pages[k])) {
-			throw 'DocsPage.pages.' + k + ' must be an array';
+		if(!p.data[k] || typeof p.data[k] != 'object') {
+			throw 'DocsPage.data.' + k + ' must be an object';
 		}
 
-		// Go through each element of the array
-		for(var i in p.pages[k]) {
+		// Check the values exist in the object
+		for(var s of ['sections', 'title']) {
 
-			// Make sure the element is an object
-			if(!p.pages[k][i] || typeof p.pages[k][i] != 'object') {
+			// Check the values exist in the object
+			if(!p.data[k][s]) {
+				throw 'DocsPages.data.' + k + '.' + s + ' is missing';
+			}
+
+			// Make sure the title is a string
+			if(typeof p.data[k].title != 'string') {
+				throw 'DocsPages.data.' + k + '.title must be a string';
+			}
+
+			// Make sure the sections is an array
+			if(!p.data[k]['sections'] || !Array.isArray(p.data[k].sections)) {
+				throw 'DocsPages.data.' + k + '.sections must be an array';
+			}
+
+			// Go through each section
+			for(var i in p.data[k].sections) {
 
 				// Check the values exist in the object
-				for(var s of ['sections', 'title']) {
-
-					// Check the values exist in the object
-					if(!p.pages[k][i][s]) {
-						throw 'DocsPages.pages.' + k + '[' + i + '].' + s + ' is missing';
+				for(var s of ['type', 'text']) {
+					if(!p.data[k].sections[i][s]) {
+						throw 'DocsPages.data.' + k + '.sections[' + i + '].' + s + ' is missing';
 					}
+				}
 
-					// Make sure the title is a string
-					if(typeof p.pages[k][i].title != 'string') {
-						throw 'DocsPages.pages.' + k + '[' + i + '].title must be a string';
-					}
+				// Make sure the type is valid
+				if(['code', 'paragraph', 'title'].indexOf(p.data[k].sections[i].type) == -1) {
+					throw 'DocsPage.data.' + k + '.sections[' + i + '].type must be one of "code", "paragraph", or "title"';
+				}
 
-					// Make sure the sections is an array
-					if(!p.pages[k][i]['title'] || !Array.isArray(p.pages[k][i].title)) {
-						throw 'DocsPages.pages.' + k + '[' + i + '].sections must be an array';
-					}
+				// If the type is code
+				if(p.data[k].sections[i].type == 'code') {
 
-					// Go through each section
-					for(var i2 in p.pages[k][i].sections) {
+					// Make sure the text is an object
+					if(typeof p.data[k].sections[i].text != 'object') {
 
-						// Check the values exist in the object
-						for(var s of ['type', 'text']) {
-							if(!p.pages[k][i].sections[i2][s]) {
-								throw 'DocsPages.pages.' + k + '[' + i + '].sections[' + i2 + '].' + s + ' is missing';
+						// Make sure the key and value are strings
+						for(var k2 in p.data[k].text) {
+							if(typeof k2 != 'string') {
+								throw k2 + ' in DocsPage.data.' + k + '.sections[' + i + '].text must be a string';
+							}
+							if(typeof p.data[k].text[k2] != 'string') {
+								throw 'DocsPage.data.' + k + '.sections[' + i + '].text[' + k2 + '] must be a string';
 							}
 						}
-
-						// Make sure the type is valid
-						if(['code', 'paragraph', 'title'].indexOf(p.pages[k][i].sections[i2].type) == -1) {
-							throw 'DocsPage.pages.' + k + '[' + i + '].sections[' + i2 + '].type must be one of "code", "paragraph", or "title"';
-						}
-
-						// If the type is code
-						if(p.pages[k][i].sections[i2].type == 'code') {
-
-							// Make sure the text is an object
-							if(typeof p.pages[k][i].sections[i2].text != 'object') {
-
-								// Make sure the key and value are strings
-								for(var k2 in p.pages[k][i].text) {
-									if(typeof k2 != 'string') {
-										throw k2 + ' in DocsPage.pages.' + k + '[' + i + '].sections[' + i2 + '].text must be a string';
-									}
-									if(typeof p.pages[k][i].text[k2] != 'string') {
-										throw 'DocsPage.pages.' + k + '[' + i + '].sections[' + i2 + '].text[' + k2 + '] must be a string';
-									}
-								}
-							}
-						}
-
-						// Else validate it's text
-						else if(typeof p.pages[k][i].sections[i2].text != 'string') {
-							throw 'DocsPage.pages.' + k + '[' + i + '].sections[' + i2 + '].text must be a tring for type of "' + p.pages[k][i].sections[i2].type +  '"';
-						}
 					}
+				}
+
+				// Else validate it's text
+				else if(typeof p.data[k].sections[i].text != 'string') {
+					throw 'DocsPage.data.' + k + '.sections[' + i + '].text must be a tring for type of "' + p.data[k].sections[i].type +  '"';
 				}
 			}
 		}
 	}
 }
 
-export default DocsPage;
+module.exports = DocsPage;

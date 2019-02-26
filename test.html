@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<script type="text/javascript" src="doc-oc.js"></script>
+	</head>
+	<body>
+		<div id="docs"></div>
+		<script type="text/javascript">
+			var data = {
+				"menu": [{
+						"title": "Installing",
+						"items": [
+							{"key": "download", "title": "Downloading"}
+						]
+					}, {
+						"title": "Methods",
+						"items": [
+							{"key": "constructor", "title": "Constructor"},
+							{"key": "clean", "title": "Cleaning"},
+							{"key": "valid", "title": "Validation"}
+						]
+					}
+				],
+				"pages": {
+					"constructor": {
+						"title": "Constructor",
+						"sections": [
+							{"type": "paragraph", "text": "This is how we construct"},
+							{"type": "title", "text": "The code"},
+							{"type": "code", "text": {
+								"javascript": "Javascript constructing",
+								"php": "PHP constructing",
+								"python": "Python constructing"
+							}}
+						]
+					},
+					"clean": {
+						"title": "Cleaning",
+						"sections": [
+							{"type": "paragraph", "text": "This is how we clean"},
+							{"type": "title", "text": "The code"},
+							{"type": "code", "text": {
+								"javascript": "Javascript cleaning",
+								"php": "PHP cleaning",
+								"python": "Python cleaning"
+							}}
+						]
+					},
+					"valid": {
+						"title": "Validation",
+						"sections": [
+							{"type": "paragraph", "text": "This is how we validate"},
+							{"type": "title", "text": "The code"},
+							{"type": "code", "text": {
+								"javascript": "Javascript validating",
+								"php": "PHP validating",
+								"python": "Python validating"
+							}}
+						]
+					}
+				},
+				"platforms": [
+					{"key": "javascript", "title": "JavaScript"},
+					{"key": "php", "title": "PHP"},
+					{"key": "python", "title": "Python"}
+				]
+			};
+
+			(function() {
+				Docs.run("docs", data, {
+					"page": "constructor",
+					"platform": "javascript"
+				});
+			})();
+		</script>
+	</body>
+</html>

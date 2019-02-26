@@ -1,11 +1,10 @@
 var path = require('path');
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: {
     "docs-oc": "./src/index.js"
   },
-  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -21,10 +20,9 @@ module.exports = {
     ]
   },
   output: {
-    filename: "[name].dev.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, '.'),
     libraryTarget: "var",
     library: "Docs"
-  },
-  watch: true
+  }
 };
