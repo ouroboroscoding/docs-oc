@@ -62,10 +62,12 @@ class DocsPage extends React.Component {
 			// Render page
 			return (
 				<div className="page">
-					<h1 className="title">{page.title}</h1>
+					<h2 className="title">{page.title}</h2>
 					<ul className="platforms">{this.props.platforms.map(function(p, i) {
 						return (
-							<li key={i} data-key={p.key} onClick={self.platformClicked}>{p.title}</li>
+							<li key={i} className={self.state.platform == p.key ? 'selected' : ''}>
+								<a href={"#platform=" + p.key + "&page=" + self.state.page} data-key={p.key} onClick={self.platformClicked}>{p.title}</a>
+							</li>
 						);
 					})}</ul>
 					<div className="sections">
@@ -73,12 +75,28 @@ class DocsPage extends React.Component {
 							if(o.type == 'code') {
 								return <pre key={i} className={self.state.platform}>{o.text[self.state.platform]}</pre>
 							} else if(o.type == 'paragraph') {
-								return <p key={i}>{o.text}</p>;
+								return <p key={i}>{o.text}</p>
+							} else if(o.type == 'pre') {
+								return <pre key={i}>{o.text}</pre>
 							} else if(o.type == 'title') {
-								return <h2 key={i}>{o.text}</h2>
+								return <h3 key={i}>{o.text}</h3>
 							}
 						})}
 					</div>
+					{page.pagination &&
+						<div className="pagination">
+							{page.pagination.prev &&
+								<div className="prevPage">
+									<a href={"#platform=" + self.state.platform + "&page=" + page.pagination.prev} data-key={page.pagination.prev} onClick={self.pageClicked}>{self.props.data[page.pagination.prev].title}</a>
+								</div>
+							}
+							{page.pagination.next &&
+								<div className="nextPage">
+									<a href={"#platform=" + self.state.platform + "&page=" + page.pagination.next} data-key={page.pagination.next} onClick={self.pageClicked}>{self.props.data[page.pagination.next].title}</a>
+								</div>
+							}
+						</div>
+					}
 				</div>
 			);
 		}
@@ -185,7 +203,7 @@ DocsPage.prototype.validate = function(p) {
 				}
 
 				// Make sure the type is valid
-				if(['code', 'paragraph', 'title'].indexOf(p.data[k].sections[i].type) == -1) {
+				if(['code', 'paragraph', 'pre', 'title'].indexOf(p.data[k].sections[i].type) == -1) {
 					throw 'DocsPage.data.' + k + '.sections[' + i + '].type must be one of "code", "paragraph", or "title"';
 				}
 
@@ -210,6 +228,29 @@ DocsPage.prototype.validate = function(p) {
 				// Else validate it's text
 				else if(typeof p.data[k].sections[i].text != 'string') {
 					throw 'DocsPage.data.' + k + '.sections[' + i + '].text must be a tring for type of "' + p.data[k].sections[i].type +  '"';
+				}
+			}
+		}
+
+		// If there's a pagination key
+		if('pagination' in p.data[k]) {
+
+			// Make sure it's an object
+			if(typeof p.data[k].pagination != 'object') {
+				throw 'DocsPage.data.' + k + '.pagination must be an object';
+			}
+
+			// Go through each key
+			for(var k2 in p.data[k].pagination) {
+
+				// Make sure the key is valid
+				if(['next', 'prev'].indexOf(k2) == -1) {
+					throw k2 + ' in DocsPage.data.' + k + '.pagination must be one of "prev" or "next"';
+				}
+
+				// Make sure it exists in the list of pages
+				if(!p.data[p.data[k].pagination[k2]]) {
+					throw 'DocsPage.data.' + k + '.pagination.' + k2 + ' not a valid page';
 				}
 			}
 		}

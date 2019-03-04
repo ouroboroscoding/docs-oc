@@ -45,8 +45,8 @@ class DocsMenu extends React.Component {
 						<ul className="menuPages">
 							{sec.items.map(function(item, y) {
 								return (
-									<li key={y} className={self.state.selected == item.key ? 'selected' : ''}>
-										<a data-key={item.key} href={"#platform" + self.state.platform + "&page=" + item.key} onClick={self.pageClicked}>{item.title}</a>
+									<li key={y} className={self.state.page == item.key ? 'selected' : ''}>
+										<a data-key={item.key} href={"#platform=" + self.state.platform + "&page=" + item.key} onClick={self.pageClicked}>{item.title}</a>
 									</li>
 								);
 							})}

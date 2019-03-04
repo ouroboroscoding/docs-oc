@@ -1,0 +1,1266 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Se",
+				"Session"
+			],
+			[
+				"parse",
+				"parseConfig"
+			],
+			[
+				"prac",
+				"practitioner_name"
+			],
+			[
+				"aPra",
+				"$aPractNEPS〔variable〕"
+			],
+			[
+				"aPr",
+				"$aPractIDs〔variable〕"
+			],
+			[
+				"get",
+				"getPractNEPsHash〔function〕"
+			],
+			[
+				"api_presc",
+				"api_prescriptions_Prescription〔class〕"
+			],
+			[
+				"current",
+				"current_rx"
+			],
+			[
+				"clas",
+				"className〔variable〕"
+			],
+			[
+				"curren",
+				"current_rx"
+			],
+			[
+				"medic",
+				"medication_"
+			],
+			[
+				"date",
+				"dateRanges"
+			],
+			[
+				"s",
+				"$sPDF64〔variable〕"
+			],
+			[
+				"base",
+				"base64_decode〔function〕"
+			],
+			[
+				"invo",
+				"$invoice_id〔variable〕"
+			],
+			[
+				"sign",
+				"signature_url"
+			],
+			[
+				"api_consent",
+				"api_consentForms_Form〔class〕"
+			],
+			[
+				"consen",
+				"consent_forms_url〔variable〕"
+			],
+			[
+				"arch",
+				"archived"
+			],
+			[
+				"by",
+				"byPractitioner〔function〕"
+			],
+			[
+				"practi",
+				"practitioner_id"
+			],
+			[
+				"group",
+				"$group_id〔variable〕"
+			],
+			[
+				"gro",
+				"$group_id〔variable〕"
+			],
+			[
+				"aLang",
+				"$aLangTpls〔variable〕"
+			],
+			[
+				"aL",
+				"$aLangTpls〔variable〕"
+			],
+			[
+				"_Api",
+				"_ApiException〔class〕"
+			],
+			[
+				"api_a",
+				"api_auth_Permission〔class〕"
+			],
+			[
+				"close",
+				"closePopup"
+			],
+			[
+				"toggle",
+				"toggleActivation"
+			],
+			[
+				"api_",
+				"api_auth_Login〔class〕"
+			],
+			[
+				"aja",
+				"ajaxResponse"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"mod",
+				"modal_email"
+			],
+			[
+				"onC",
+				"onChangePassword"
+			],
+			[
+				"onChan",
+				"onChangePassword"
+			],
+			[
+				"onCh",
+				"onChangeEmail"
+			],
+			[
+				"urlen",
+				"urlencode〔function〕"
+			],
+			[
+				"dele",
+				"delete〔function〕"
+			],
+			[
+				"polling",
+				"pollingLeave"
+			],
+			[
+				"messae",
+				"message_create"
+			],
+			[
+				"thread",
+				"threads_controller"
+			],
+			[
+				"str",
+				"stringify"
+			],
+			[
+				"api_s",
+				"api_support_Thread"
+			],
+			[
+				"Elem",
+				"ElemComponent"
+			],
+			[
+				"return",
+				"return404"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/chris/workspace/docs-oc/src/index.js",
+			"settings":
+			{
+				"buffer_size": 378,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/chris/workspace/docs-oc/src/docs-menu.jsx",
+			"settings":
+			{
+				"buffer_size": 3330,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/chris/workspace/docs-oc/src/docs-page.jsx",
+			"settings":
+			{
+				"buffer_size": 6959,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/chris/workspace/docs-oc/src/docs.jsx",
+			"settings":
+			{
+				"buffer_size": 1661,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/chris/workspace/docs-oc/src/hash.js",
+			"settings":
+			{
+				"buffer_size": 1915,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/chris/workspace/docs-oc/package.json",
+			"settings":
+			{
+				"buffer_size": 790,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 340.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"packages",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 901.0,
+		"history":
+		[
+			"sublime.log_input(False)",
+			"sublime.log_input(True)",
+			"sublime.log_input(False)",
+			"sublime.log_input(True)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/chris/workspace/emr/hosts/static/js"
+	],
+	"file_history":
+	[
+		"/home/chris/workspace/docs-oc/src/hash.js",
+		"/home/chris/workspace/docs-oc/src/docs.jsx",
+		"/home/chris/workspace/docs-oc/test.html",
+		"/home/chris/workspace/docs-oc/webpack.dev.js",
+		"/home/chris/workspace/docs-oc/webpack.prod.js",
+		"/home/chris/workspace/docs-oc/.babelrc",
+		"/home/chris/workspace/docs-oc/.gitignore",
+		"/home/chris/workspace/docs-oc/docs-oc.js",
+		"/home/chris/workspace/docs-oc/package.json",
+		"/home/chris/workspace/emr/hosts/static/js/my.js",
+		"/home/chris/workspace/emr/development/react/elements/autocomplete.jsx",
+		"/home/chris/workspace/docs-oc/development/install.sh",
+		"/home/chris/workspace/docs-oc/doc-oc.dev.js",
+		"/home/chris/workspace/docs-oc/development/docs-oc.sublime-project",
+		"/home/chris/workspace/emr/development/emr.sublime-project",
+		"/home/chris/workspace/emr/hosts/static/js/generic/browser.js",
+		"/home/chris/workspace/emr/development/react/sites/admin.jsx",
+		"/home/chris/workspace/emr/development/react/elements/locale.jsx",
+		"/home/chris/workspace/emr/development/react/elements/loader.jsx",
+		"/home/chris/workspace/emr/development/react/elements/inputEnter.jsx",
+		"/home/chris/workspace/emr/development/react/composites/profileAutocomplete.jsx",
+		"/home/chris/workspace/emr/development/react/composites/phoneNumbers.jsx",
+		"/home/chris/workspace/emr/development/react/composites/header.jsx",
+		"/home/chris/workspace/emr/development/react/composites/address.jsx",
+		"/home/chris/workspace/emr/development/react/base/forms.jsx",
+		"/home/chris/workspace/emr/development/react/pages/dbhosts.jsx",
+		"/home/chris/workspace/emr/development/react/pages/categories.jsx",
+		"/home/chris/workspace/emr/development/react/elements/menu.jsx",
+		"/home/chris/workspace/emr/development/react/elements/modal.jsx",
+		"/home/chris/workspace/emr/development/react/elements/messages.jsx",
+		"/home/chris/workspace/docs-oc/doc-oc.js",
+		"/home/chris/workspace/docs-oc/dist/docs-oc.js",
+		"/home/chris/workspace/emr/hosts/static/js/generic/hash.js",
+		"/home/chris/workspace/emr/hosts/static/js/generic/tools.js",
+		"/home/chris/workspace/emr/hosts/static/js/organization.js",
+		"/home/chris/workspace/docs-oc/development/host_only.sh",
+		"/home/chris/workspace/docs-oc/development/root_access.sh",
+		"/home/chris/workspace/docs-oc/webpack.config.js",
+		"/home/chris/workspace/axegains/development/gruntfile.old.js",
+		"/home/chris/workspace/axegains/development/install/root_access.sh",
+		"/home/chris/workspace/axegains/development/webpack.config.js",
+		"/home/chris/workspace/axegains/development/package.json",
+		"/home/chris/workspace/axegains/.git/config",
+		"/home/chris/workspace/axegains/development/install/install.sh",
+		"/home/chris/workspace/axegains/development/install/host_only.sh",
+		"/home/chris/workspace/axegains/development/gruntfile.js",
+		"/home/chris/workspace/axegains/development/package.old.json",
+		"/home/chris/workspace/axegains/development/react/signin.jsx",
+		"/home/chris/workspace/axegains/development/certinfo.txt",
+		"/home/chris/workspace/axegains/hosts/www/css/index.css",
+		"/home/chris/workspace/axegains/modules/Services.py",
+		"/home/chris/workspace/axegains/install/install.sh",
+		"/home/chris/workspace/axegains/services/rest/__init__.py",
+		"/home/chris/workspace/axegains/install/install.py",
+		"/home/chris/workspace/axegains/development/react/target_natf.jsx",
+		"/home/chris/workspace/axegains/install/devops/etc/nginx/sites-available/axegains.com",
+		"/home/chris/workspace/axegains/hosts/www/css/target_natf.css",
+		"/home/chris/workspace/axegains/development/sass/base.scss",
+		"/home/chris/workspace/axegains/development/sass/main.scss",
+		"/home/chris/workspace/axegains/services/rest/Structures.py",
+		"/home/chris/workspace/axegains/development/nodesource_setup.sh",
+		"/home/chris/workspace/axegains/hosts/www/index.html",
+		"/home/chris/workspace/axegains/hosts/www/js/index.js",
+		"/home/chris/workspace/axegains/modules/Session.py",
+		"/home/chris/workspace/axegains/definitions/practice.json",
+		"/home/chris/workspace/axegains/services/rest/__main__.py",
+		"/home/chris/workspace/axegains/development/react/main.jsx",
+		"/home/chris/workspace/axegains/install/devops/etc/redis/session.conf",
+		"/home/chris/workspace/axegains/install/devops/etc/init.d/redis-session",
+		"/home/chris/workspace/axegains/hosts/www/js/common.js",
+		"/home/chris/workspace/axegains/definitions/user.json",
+		"/home/chris/workspace/axegains/definitions/session.json",
+		"/home/chris/workspace/axegains/install/devops/etc/supervisor/supervisord.conf",
+		"/home/chris/workspace/axegains/definitions/stats.json",
+		"/home/chris/workspace/axegains/.gitignore",
+		"/home/chris/workspace/axegains/install/__init__.py",
+		"/home/chris/workspace/axegains/install/devops/etc/rethinkdb/instances.d/axegains.conf",
+		"/home/chris/workspace/axegains/modules/Storage.py",
+		"/home/chris/workspace/axegains/config.json",
+		"/home/chris/workspace/axegains/errors.json",
+		"/home/chris/workspace/axegains/install/host_only.sh",
+		"/home/chris/workspace/axegains/install/devops/etc/supervisor/conf.d/rest.conf",
+		"/home/chris/workspace/axegains/install/devops/etc/supervisor/conf.d/websocket.conf",
+		"/home/chris/workspace/axegains/modules/Config.py",
+		"/home/chris/workspace/axegains/install/requirements.txt",
+		"/home/chris/workspace/axegains/modules/WebServer.py",
+		"/home/chris/workspace/axegains/modules/Sync.py",
+		"/home/chris/workspace/axegains/modules/Strings.py",
+		"/home/chris/workspace/axegains/modules/SQL.py",
+		"/home/chris/workspace/axegains/modules/SSS.py",
+		"/home/chris/workspace/axegains/modules/Resiize.py",
+		"/home/chris/workspace/axegains/modules/Photo.py",
+		"/home/chris/workspace/axegains/modules/OS.py",
+		"/home/chris/workspace/axegains/modules/JSON.py",
+		"/home/chris/workspace/axegains/modules/Email.py",
+		"/home/chris/workspace/axegains/modules/Document.py",
+		"/home/chris/workspace/axegains/modules/Dictionaries.py",
+		"/home/chris/workspace/axegains/services/websocket/__init__.py",
+		"/home/chris/workspace/axegains/services/websocket/__main__.py",
+		"/home/chris/workspace/axegains/services/__init__.py",
+		"/home/chris/workspace/axegains/modules/__init__.py",
+		"/home/chris/workspace/mylo/cron.txt",
+		"/home/chris/workspace/mylo/package.json",
+		"/home/chris/workspace/mylo/cron.js",
+		"/home/chris/workspace/mylo/fibonacci_clean.js",
+		"/home/chris/workspace/mylo/fibonacci_small.js",
+		"/home/chris/workspace/mylo/install/install.sh",
+		"/home/chris/workspace/mylo/install/root_access.sh",
+		"/home/chris/workspace/mylo/install/host_only.sh",
+		"/home/chris/workspace/gaargle/dvtl2-web/install/devops/etc/nginx/nginx.conf",
+		"/home/chris/workspace/gaargle/dvtl2-web/install/install_dev.sh",
+		"/home/chris/workspace/gaargle/dvtl2-web/install/install.sh",
+		"/home/chris/workspace/gaargle/dvtl2-web/development/react/components/AppointmentsDashBoardListComponent.jsx",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/models/api/cpp/Practitioner.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/models/api/xray/Image.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/models/Controller.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/sensorsync/controllers/xrays.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/app/controllers/account.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/models/api/accounting/Invoice.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/common/classes/ApiDriver.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/models/api/auth/Login.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/development/react/components/staff/StaffComponent.jsx",
+		"/home/chris/workspace/gaargle/dvtl2-web/hosts/origin/js/app/export.js",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/app/views/export.tpl",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/connect/views/parts/header.tpl",
+		"/home/chris/workspace/gaargle/dvtl2-web/hosts/connect/index.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/mvc/connect/controllers/profile.php",
+		"/home/chris/workspace/gaargle/dvtl2-web/development/react/components/ProfileComponent.jsx"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+			"/home/chris/workspace/axegains",
+			"/home/chris/workspace/gaargle/dvtl2-web/mvc/connect",
+			"/home/chris/workspace/gaargle/dvtl2-web/mvc",
+			"/home/chris/workspace/gaargle/dvtl2-web/development/less",
+			"/home/chris/workspace/gaargle/dvtl2-web",
+			"/home/chris/workspace/gaargle/dvtl2-web/development/react",
+			"/home/chris/workspace/gaargle/dvtl2-web",
+			"/home/chris/workspace/gaargle/dvtl2-web/development/react",
+			"/home/chris/workspace/gaargle/dvtl2-web/development",
+			"/home/chris/workspace/gaargle/dvtl2-web/development/react/components",
+			"/home/chris/workspace/gaargle/dvtl2-web/development/react",
+			"/home/chris/workspace/gaargle/dvtl2-web/development/less",
+			"/home/chris/workspace/gaargle/dvtl2-web",
+			"/home/chris/workspace/gaargle/dvtl2-ui/mvc",
+			"/home/chris/workspace/gaargle/dvtl2-web"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"page",
+			"pages",
+			"Pages",
+			"pages",
+			"Pages",
+			"pages",
+			"Pages",
+			"pages",
+			"sections",
+			"class=",
+			"page",
+			"constructing",
+			"page",
+			"onChange",
+			"item",
+			"ocCode",
+			"Code",
+			"code",
+			"onPage",
+			"items",
+			"sections",
+			"Hash",
+			"sections",
+			"axegains",
+			"Sitting",
+			"Session",
+			"sitting",
+			"Sitting",
+			"sitting",
+			"Sitting",
+			"sitting",
+			"Sitting",
+			"sitting",
+			"signout",
+			"data[",
+			"session",
+			"Session",
+			"md5",
+			"User",
+			"Contact",
+			"Financials",
+			"shared.",
+			"shared",
+			"User",
+			"Form",
+			"Session",
+			"consentForms",
+			"chris@dovetail.co",
+			"wdonato@dovetail.co",
+			"Will Donato",
+			"cnasr@dovetail.co",
+			"Gaargle Solutions",
+			"1",
+			"minutes",
+			"now",
+			"vals",
+			"lVals",
+			"password",
+			"password/forgot",
+			"setClinic",
+			"dashboard",
+			"generateAvatarLinks",
+			"this",
+			"m.",
+			"m",
+			"lMedications",
+			"medications_update",
+			"dosage",
+			"res.error.msg + '('",
+			"this.props.medications.groups[i].items[y]",
+			"res.error.msg",
+			"sortCreated",
+			"this",
+			".list_check",
+			"medicationClick",
+			"submission",
+			"e.",
+			"api_Reporting::generate",
+			"$",
+			"jquery",
+			"pikaday",
+			"finacials-icon",
+			"financials-icon",
+			"menu_clinic",
+			"Support",
+			"main_menu",
+			"Support",
+			"99999",
+			"this.state",
+			"SigPad",
+			"There are no items to list in this category",
+			"class=",
+			"Rate My Doctor",
+			"pointer",
+			" readonly",
+			" readonly=",
+			" for=",
+			"schedule-columns",
+			"ConsentClinicComponent",
+			"api_consentForm_Form",
+			"api_consentForm_Signature",
+			"outstandingPatients",
+			"#wrapper",
+			"support_staff_new",
+			"confirmation_sms",
+			"confirmation_email",
+			"check",
+			"passwordChange",
+			"support_admin",
+			"support_clinic",
+			"support_thread_create",
+			"support_thread",
+			"support_message",
+			"login_permissions",
+			"login_search",
+			"r_login_search",
+			"d2form",
+			"T+",
+			"R+",
+			"E+",
+			"+\"",
+			":REACT",
+			":BASE",
+			"BASE+\"",
+			"REACT+\"",
+			" :",
+			"BASE+\"/bower_components",
+			"  react"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"modules.",
+			"chris@fuelforthefire.ca",
+			"Chris Nasr",
+			"chris@fuelforthefire.ca",
+			"OuroborosCoding",
+			"BASE + \"",
+			"REACT + \"",
+			":",
+			"BOWER + \"",
+			"react",
+			"REACT+\"",
+			"REACT+\"/",
+			"fakeurl",
+			"className=\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/chris/workspace/docs-oc/src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336,
+								336
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/chris/workspace/docs-oc/src/docs-menu.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1003,
+								1003
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/chris/workspace/docs-oc/src/docs-page.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6959,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1159,
+								1159
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 629.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/chris/workspace/docs-oc/src/docs.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1661,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								434,
+								434
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/chris/workspace/docs-oc/src/hash.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/chris/workspace/docs-oc/package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 790,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								524,
+								524
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "docs-oc.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"common",
+				"hosts/www/js/common.js"
+			],
+			[
+				"user.json",
+				"definitions/user.json"
+			],
+			[
+				"staffcomon",
+				"development/react/components/staff/StaffComponent.jsx"
+			],
+			[
+				"api",
+				"mvc/models/API.php"
+			],
+			[
+				"clinicc",
+				"mvc/models/ClinicController.php"
+			],
+			[
+				"log",
+				"mvc/models/LoginController.php"
+			],
+			[
+				"contr",
+				"mvc/models/Controller.php"
+			],
+			[
+				"progressnote.les",
+				"development/less/progressnotes.less"
+			],
+			[
+				"rx.php",
+				"mvc/app/controllers/rx.php"
+			],
+			[
+				"install.",
+				"install/install.sh"
+			],
+			[
+				"pika",
+				"hosts/origin/bower_components/pikaday/pikaday.js"
+			],
+			[
+				"pikad",
+				"hosts/origin/bower_components/pikaday/pikaday.js"
+			],
+			[
+				"utils.js",
+				"hosts/origin/js/utils.js"
+			],
+			[
+				"common.js",
+				"hosts/origin/js/common.js"
+			],
+			[
+				"error.tpl",
+				"mvc/app/views/error.tpl"
+			],
+			[
+				"test",
+				"mvc/app/controllers/TESTING.php"
+			],
+			[
+				"controllersclinic",
+				"mvc/app/controllers/clinic.php"
+			],
+			[
+				"consent.js",
+				"hosts/origin/js/app/patient/consent.js"
+			],
+			[
+				"consent.tpl",
+				"mvc/app/views/patient/consent.tpl"
+			],
+			[
+				"patient.php",
+				"mvc/app/controllers/patient.php"
+			],
+			[
+				"consent.tp",
+				"mvc/app/views/patient/consent.tpl"
+			],
+			[
+				"clinic.p",
+				"mvc/app/controllers/clinic.php"
+			],
+			[
+				"react/consent/",
+				"development/react/components/consentForms/clinic.jsx"
+			],
+			[
+				"mvc/consent",
+				"mvc/app/controllers/consent.php"
+			],
+			[
+				"consentform",
+				"mvc/models/api/consentForms/Form.php"
+			],
+			[
+				"definitionsexam",
+				"dvtl2-lib/definitions/odo/exam.json"
+			],
+			[
+				"patient.",
+				"mvc/app/controllers/patient.php"
+			],
+			[
+				"appointment",
+				"mvc/models/api/schedule/Appointment.php"
+			],
+			[
+				"app.less",
+				"development/less/app.less"
+			],
+			[
+				"support.",
+				"mvc/admin/controllers/support.php"
+			],
+			[
+				"installhos",
+				"install/host_only.sh"
+			],
+			[
+				"login_se",
+				"development/react/components/auth/login_search.jsx"
+			],
+			[
+				"app",
+				"development/less/app.less"
+			],
+			[
+				"admin.",
+				"development/less/admin.less"
+			],
+			[
+				"login_resul",
+				"development/react/components/auth/login_result.jsx"
+			],
+			[
+				"modal",
+				"development/react/components/modal.jsx"
+			],
+			[
+				"controller",
+				"mvc/models/Controller.php"
+			],
+			[
+				"modelsapiperm",
+				"mvc/models/api/auth/Permission.php"
+			],
+			[
+				"index",
+				"hosts/app/index.php"
+			],
+			[
+				"index.",
+				"hosts/admin/index.php"
+			],
+			[
+				"notfound",
+				"mvc/app/views/notfound.tpl"
+			],
+			[
+				"login.p",
+				"mvc/admin/controllers/login.php"
+			],
+			[
+				"modal.ess",
+				"development/less/modal.less"
+			],
+			[
+				"lessad",
+				"development/less/admin.less"
+			],
+			[
+				"reactstaff",
+				"development/react/components/staff/StaffComponent.jsx"
+			],
+			[
+				"modelsauth",
+				"mvc/models/api/auth/Login.php"
+			],
+			[
+				"controllerslog",
+				"mvc/admin/controllers/login.php"
+			],
+			[
+				"comm",
+				"hosts/origin/js/common.js"
+			],
+			[
+				"login",
+				"mvc/admin/controllers/login.php"
+			],
+			[
+				"sprite",
+				"development/less/main_sprite.less"
+			],
+			[
+				"menu",
+				"development/less/main_menu.less"
+			],
+			[
+				"main_spr",
+				"development/less/main_sprite.less"
+			],
+			[
+				"http",
+				"common/classes/HTTP.php"
+			],
+			[
+				"os",
+				"common/classes/OS.php"
+			],
+			[
+				"support.tpl",
+				"mvc/app/views/support.tpl"
+			],
+			[
+				"support.js",
+				"hosts/origin/js/app/support.js"
+			],
+			[
+				"supportmessage",
+				"mvc/models/api/support/Message.php"
+			],
+			[
+				"support",
+				"mvc/app/controllers/support.php"
+			],
+			[
+				"modelsapipracti",
+				"mvc/models/api/cpp/Practitioner.php"
+			],
+			[
+				"control",
+				"mvc/classes/Controller.php"
+			],
+			[
+				"home.php",
+				"mvc/controllers/support/home.php"
+			],
+			[
+				"signin",
+				"mvc/controllers/support/signin.php"
+			],
+			[
+				"home.tpl",
+				"mvc/views/support/home.tpl"
+			],
+			[
+				"home.js",
+				"hosts/origin/js/support/home.js"
+			],
+			[
+				"threads.js",
+				"development/react/support/threads.jsx"
+			],
+			[
+				"login.js",
+				"development/react/login.jsx"
+			],
+			[
+				"auth",
+				"mvc/models/Auth.php"
+			],
+			[
+				"home",
+				"hosts/origin/js/home.js"
+			],
+			[
+				"signin.",
+				"mvc/controllers/support/signin.php"
+			],
+			[
+				"logincon",
+				"mvc/classes/LoginController.php"
+			],
+			[
+				"basemod",
+				"mvc/models/BaseModel.php"
+			],
+			[
+				"aja",
+				"mvc/classes/AjajController.php"
+			],
+			[
+				"threads.",
+				"mvc/controllers/support/threads.php"
+			],
+			[
+				"footer.",
+				"mvc/views/support/parts/footer.tpl"
+			],
+			[
+				"errors.json",
+				"dvtl2-lib/data/errors.json"
+			],
+			[
+				"errors",
+				"dvtl2-lib/data/errors.json"
+			],
+			[
+				"errors.js",
+				"dvtl2-lib/data/errors.json"
+			],
+			[
+				"sign",
+				"mvc/controllers/support/signin.php"
+			],
+			[
+				"footer",
+				"mvc/views/punchclock/parts/footer.tpl"
+			],
+			[
+				"utils.j",
+				"hosts/origin/js/utils.js"
+			],
+			[
+				"react_comp",
+				"development/less/react_components.less"
+			],
+			[
+				"support.tp",
+				"mvc/app/views/support.tpl"
+			],
+			[
+				"view",
+				"common/classes/View.php"
+			],
+			[
+				"clinic.jsx",
+				"development/react/components/support/clinic.jsx"
+			],
+			[
+				"thread.js",
+				"development/react/components/support/thread.jsx"
+			],
+			[
+				"definitions/support",
+				"dvtl2-lib/definitions/support/thread.json"
+			],
+			[
+				"thread",
+				"mvc/models/api/support/Thread.php"
+			],
+			[
+				"tabs_li",
+				"development/react/components/tabs_list.jsx"
+			],
+			[
+				"cliniccontrol",
+				"mvc/models/ClinicController.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/workspace/format/format-oc.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 250.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
