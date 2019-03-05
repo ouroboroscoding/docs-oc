@@ -1,5 +1,6 @@
 // Import modules
-var React = require("react");
+var React = require('react');
+var ReactMarkdown = require('react-markdown');
 
 // Create DocsPage class and export it
 class DocsPage extends React.Component {
@@ -31,6 +32,7 @@ class DocsPage extends React.Component {
 		// Bind methods
 		this.pageClicked = this.pageClicked.bind(this);
 		this.platformClicked = this.platformClicked.bind(this);
+		this.processSection = this.processSection.bind(this);
 	}
 
 	pageClicked(ev) {
@@ -47,6 +49,39 @@ class DocsPage extends React.Component {
 		}, function() {
 			this.props.onPlatform(this.state.platform)
 		});
+	}
+
+	processSection(x) {
+
+		// Get the right text based on platform
+		var s = '';
+
+		// If the section is a string, return as is
+		if(typeof x == 'string') {
+			s = x;
+		}
+
+		// Else if we have an object
+		if(typeof x == 'object') {
+
+			// Do we have a section for the current platform?
+			if(x[this.state.platform]) {
+				s = x[this.state.platform];
+			}
+
+			// Else do we have a default
+			else if(x['_']) {
+				s = x['_'];
+			}
+
+			// Else, return an error message
+			else {
+				s = 'NO TEXT FOUND FOR "' + this.state.platform + '"';
+			}
+		}
+
+		// Process any links or special characters and return
+		return s;
 	}
 
 	render() {
@@ -73,13 +108,13 @@ class DocsPage extends React.Component {
 					<div className="sections">
 						{page.sections.map(function(o, i) {
 							if(o.type == 'code') {
-								return <pre key={i} className={self.state.platform}>{o.text[self.state.platform]}</pre>
+								return <pre key={i}>{self.processSection(o.text)}</pre>
+							} else if(o.type == 'markdown') {
+								return <ReactMarkdown key={i} source={self.processSection(o.text)} />
 							} else if(o.type == 'paragraph') {
-								return <p key={i}>{o.text}</p>
-							} else if(o.type == 'pre') {
-								return <pre key={i}>{o.text}</pre>
+								return <p key={i}>{self.processSection(o.text)}</p>
 							} else if(o.type == 'title') {
-								return <h3 key={i}>{o.text}</h3>
+								return <h3 key={i}>{self.processSection(o.text)}</h3>
 							}
 						})}
 					</div>
@@ -203,31 +238,13 @@ DocsPage.prototype.validate = function(p) {
 				}
 
 				// Make sure the type is valid
-				if(['code', 'paragraph', 'pre', 'title'].indexOf(p.data[k].sections[i].type) == -1) {
+				if(['code', 'markdown', 'paragraph', 'title'].indexOf(p.data[k].sections[i].type) == -1) {
 					throw 'DocsPage.data.' + k + '.sections[' + i + '].type must be one of "code", "paragraph", or "title"';
 				}
 
-				// If the type is code
-				if(p.data[k].sections[i].type == 'code') {
-
-					// Make sure the text is an object
-					if(typeof p.data[k].sections[i].text != 'object') {
-
-						// Make sure the key and value are strings
-						for(var k2 in p.data[k].text) {
-							if(typeof k2 != 'string') {
-								throw k2 + ' in DocsPage.data.' + k + '.sections[' + i + '].text must be a string';
-							}
-							if(typeof p.data[k].text[k2] != 'string') {
-								throw 'DocsPage.data.' + k + '.sections[' + i + '].text[' + k2 + '] must be a string';
-							}
-						}
-					}
-				}
-
-				// Else validate it's text
-				else if(typeof p.data[k].sections[i].text != 'string') {
-					throw 'DocsPage.data.' + k + '.sections[' + i + '].text must be a tring for type of "' + p.data[k].sections[i].type +  '"';
+				// Make sure we have either a string or an object
+				if(['string', 'object'].indexOf(typeof p.data[k].sections[i].text) == -1) {
+					throw 'DocsPage.data.' + k + '.sections[' + i + '].text must be a "string" or an "object"';
 				}
 			}
 		}
