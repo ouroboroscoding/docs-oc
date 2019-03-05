@@ -43,7 +43,13 @@ class Docs extends React.Component {
 			this.hash.set("page", page);
 			this.refs.menu.page = page;
 			this.refs.page.page = page;
-		})
+			if(this.props.onChange) {
+				this.props.onChange({
+					"page": page,
+					"platform": this.state.platform
+				});
+			}
+		});
 	}
 
 	platformChange(platform) {
@@ -53,7 +59,13 @@ class Docs extends React.Component {
 			this.hash.set("platform", platform);
 			this.refs.menu.platform = platform;
 			this.refs.page.platform = platform;
-		})
+			if(this.props.onChange) {
+				this.props.onChange({
+					"page": this.state.page,
+					"platform": platform
+				});
+			}
+		});
 	}
 
 	render() {
@@ -63,6 +75,7 @@ class Docs extends React.Component {
 				<DocsMenu
 					onPage={this.pageChange}
 					page={this.state.page}
+					platform={this.state.platform}
 					data={this.props.data.menu}
 					ref="menu"
 				/>

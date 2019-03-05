@@ -108,11 +108,13 @@ class DocsPage extends React.Component {
 					<div className="sections">
 						{page.sections.map(function(o, i) {
 							if(o.type == 'code') {
-								return <pre key={i}>{self.processSection(o.text)}</pre>
+								return <pre key={i}><code className={o.code ? o.code : self.state.platform}>{self.processSection(o.text)}</code></pre>
 							} else if(o.type == 'markdown') {
 								return <ReactMarkdown key={i} source={self.processSection(o.text)} />
 							} else if(o.type == 'paragraph') {
 								return <p key={i}>{self.processSection(o.text)}</p>
+							} else if(o.type == 'pre') {
+								return <pre key={i}>{self.processSection(o.text)}</pre>
 							} else if(o.type == 'title') {
 								return <h3 key={i}>{self.processSection(o.text)}</h3>
 							}
@@ -238,7 +240,7 @@ DocsPage.prototype.validate = function(p) {
 				}
 
 				// Make sure the type is valid
-				if(['code', 'markdown', 'paragraph', 'title'].indexOf(p.data[k].sections[i].type) == -1) {
+				if(['code', 'markdown', 'paragraph', 'pre', 'title'].indexOf(p.data[k].sections[i].type) == -1) {
 					throw 'DocsPage.data.' + k + '.sections[' + i + '].type must be one of "code", "paragraph", or "title"';
 				}
 
