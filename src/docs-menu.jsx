@@ -12,27 +12,11 @@ class DocsMenu extends React.Component {
 		// Check the properties (will throw on error)
 		this.validate(props);
 
-		// If there's no page callback
-		if(!props.onPage || typeof props.onPage != 'function') {
-			throw 'DocsMenu requires onPage callback';
-		}
-
 		// Initialise the state
 		this.state = {
 			"page": props.page,
 			"platform": props.platform
 		};
-
-		// Bind methods
-		this.pageClicked = this.pageClicked.bind(this);
-	}
-
-	pageClicked(ev) {
-		this.setState({
-			"page": ev.currentTarget.dataset.key
-		}, function() {
-			this.props.onPage(this.state.page);
-		})
 	}
 
 	render() {
@@ -46,7 +30,7 @@ class DocsMenu extends React.Component {
 							{sec.items.map(function(item, y) {
 								return (
 									<li key={y} className={self.state.page == item.key ? 'selected' : ''}>
-										<a data-key={item.key} href={"#platform=" + self.state.platform + "&page=" + item.key} onClick={self.pageClicked}>{item.title}</a>
+										<a data-key={item.key} href={"#platform=" + self.state.platform + "&page=" + item.key}>{item.title}</a>
 									</li>
 								);
 							})}

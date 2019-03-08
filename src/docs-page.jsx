@@ -13,16 +13,6 @@ class DocsPage extends React.Component {
 		// Check the properties (will throw on error)
 		this.validate(props);
 
-		// If there's no page callback
-		if(!props.onPage || typeof props.onPage != 'function') {
-			throw 'DocsPage requires onPage callback';
-		}
-
-		// If there's no platform callback
-		if(!props.onPlatform || typeof props.onPlatform != 'function') {
-			throw 'DocsPage requires onPlatform callback';
-		}
-
 		// Initialise the state
 		this.state = {
 			"page": props.page,
@@ -30,25 +20,7 @@ class DocsPage extends React.Component {
 		};
 
 		// Bind methods
-		this.pageClicked = this.pageClicked.bind(this);
-		this.platformClicked = this.platformClicked.bind(this);
 		this.processSection = this.processSection.bind(this);
-	}
-
-	pageClicked(ev) {
-		this.setState({
-			"page": ev.currentTarget.dataset.key
-		}, function() {
-			this.props.onPage(this.state.page)
-		});
-	}
-
-	platformClicked(ev) {
-		this.setState({
-			"platform": ev.currentTarget.dataset.key
-		}, function() {
-			this.props.onPlatform(this.state.platform)
-		});
 	}
 
 	processSection(x) {

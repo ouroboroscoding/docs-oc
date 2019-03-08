@@ -25,12 +25,54 @@ class Hash {
 	 *
 	 * @name Hash
 	 * @access public
-	 * @return {[type]} [description]
+	 * @param function callback
+	 * @return Hash
 	 */
-	constructor() {
+	constructor(callback) {
 
 		// Init the member variable
 		this.hash = {};
+
+		// Track changes
+		window.addEventListener("hashchange", this._hashChanged.bind(this));
+
+		// Store the callback (even if it's undefined)
+		this.change = callback;
+
+		// Parse the current location hash
+		this._parseHash();
+	}
+
+	/**
+	 * Hash Changed
+	 *
+	 * Called when the location hash has been altered
+	 *
+	 * @name _hashChanged
+	 * @access protected
+	 * @return void
+	 */
+	_hashChanged() {
+
+		// Re-parse the current location hash
+		this._parseHash();
+
+		// If there's a callback
+		if(this.change) {
+			this.change(this);
+		}
+	}
+
+	/**
+	 * Parse Hash
+	 *
+	 * Parses the current location hash into an object
+	 *
+	 * @name _parseHash
+	 * @access protected
+	 * @return void
+	 */
+	_parseHash() {
 
 		// If there's anything in the hash
 		if(window.location.hash.length > 1) {
