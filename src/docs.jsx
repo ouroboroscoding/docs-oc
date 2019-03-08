@@ -23,46 +23,28 @@ class Docs extends React.Component {
 		}
 
 		// Fetch the current location hash
-		this.hash = new Hash();
+		this.hash = new Hash(this.hashChange.bind(this));
 
 		// Initialise the state
 		this.state = {
 			"page": this.hash.get('page') || props.page,
 			"platform": this.hash.get('platform') || props.platform
 		};
-
-		// Bind methods
-		this.pageChange = this.pageChange.bind(this);
-		this.platformChange = this.platformChange.bind(this);
 	}
 
-	pageChange(page) {
+	hashChange(hash) {
 		this.setState({
-			"page": page
+			"page": hash.get('page', this.state.page),
+			"platform": hash.get('platform', this.state.platform)
 		}, function() {
-			this.hash.set("page", page);
-			this.refs.menu.page = page;
-			this.refs.page.page = page;
-			if(this.props.onChange) {
-				this.props.onChange({
-					"page": page,
-					"platform": this.state.platform
-				});
-			}
-		});
-	}
-
-	platformChange(platform) {
-		this.setState({
-			"platform": platform
-		}, function() {
-			this.hash.set("platform", platform);
-			this.refs.menu.platform = platform;
-			this.refs.page.platform = platform;
+			this.refs.menu.page = this.state.page;
+			this.refs.menu.platform = this.state.platform;
+			this.refs.page.page = this.state.page;
+			this.refs.page.platform = this.state.platform;
 			if(this.props.onChange) {
 				this.props.onChange({
 					"page": this.state.page,
-					"platform": platform
+					"platform": this.state.platform
 				});
 			}
 		});
@@ -73,15 +55,12 @@ class Docs extends React.Component {
 		return (
 			<React.Fragment>
 				<DocsMenu
-					onPage={this.pageChange}
 					page={this.state.page}
 					platform={this.state.platform}
 					data={this.props.data.menu}
 					ref="menu"
 				/>
 				<DocsPage
-					onPage={this.pageChange}
-					onPlatform={this.platformChange}
 					page={this.state.page}
 					data={this.props.data.pages}
 					platform={this.state.platform}
