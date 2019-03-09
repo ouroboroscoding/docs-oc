@@ -52,6 +52,9 @@ class DocsPage extends React.Component {
 			}
 		}
 
+		// Replace |PLATFORM| for links
+		s = s.split('|PLATFORM|').join(this.state.platform);
+
 		// Process any links or special characters and return
 		return s;
 	}
